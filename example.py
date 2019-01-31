@@ -17,7 +17,7 @@ def routine_b(r):
 
 if __name__ == '__main__': # Program starting from here 
         try:
-                r = relayShiftRegisterModule(13,11,number_of_relays=4)
+                r = relayShiftRegisterModule(27,17,number_of_relays=4)
                 while True:
                 	routine_a(r)
                 	routine_b(r)
