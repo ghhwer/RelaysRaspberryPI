@@ -2,7 +2,6 @@ from time import sleep
 from relays import relayShiftRegisterModule
 
 def routine_a(r):
-        active_relays = []
         r.reset_module()
         active_relays = []
         for x in range(1,r.number_of_relays+1):
