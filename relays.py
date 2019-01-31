@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 class relayShiftRegisterModule:
-        def __init__(self,DATA_PIN, CLK_PIN, CLK_INTERVAL=0.00109, number_of_relays=4):
+        def __init__(self,DATA_PIN, CLK_PIN, CLK_INTERVAL=0.000520, number_of_relays=4):
                 """
                 Sets up class variables and any I/O needed
                 """
@@ -10,7 +10,7 @@ class relayShiftRegisterModule:
                 self.CLK_PIN = CLK_PIN
                 self.CLK_INTERVAL = CLK_INTERVAL
                 self.number_of_relays = number_of_relays
-                GPIO.setmode(GPIO.BOARD)    # Number GPIOs by its physical location
+                GPIO.setmode(GPIO.BCM)    # Number GPIOs by its physical location
                 GPIO.setup(self.DATA_PIN, GPIO.OUT)
                 GPIO.setup(self.CLK_PIN, GPIO.OUT)
                 GPIO.output(self.DATA_PIN, 0)
